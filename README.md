@@ -5,3 +5,5 @@
 **กรณีใช้ XAMPP บนวินโดวส์** ให้โคลนโปรเจ็กท์ไปเก็บไว้ที่ `C:\XAMPP\htdocs` และสั่ง `composer install` จากนั้นเข้าผ่าน [http://localhost/php-sample-router/public/](http://localhost/php-sample-router/public/)
 
 **ส่วนใครที่ใช้แมคหรือลินิกซ์**  โคลนโปรเจ็กท์ไปไว้ที่ไหนก็ได้  จากนั้นสั่ง `composer install` และสั่ง `php -S localhost:8000 -t public public/index.php` จากนั้นเข้าผ่าน [http://localhost:8000](http://localhost:8000)
+
+โปรเจ็กท์สามารถรันได้ทันที  ไม่ต้องเซ็ตอัปฐานข้อมูลเพิ่มเติม (ข้อมูลถูกเก็บบน SQLite ที่ `db/main.db`)
