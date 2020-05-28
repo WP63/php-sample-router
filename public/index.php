@@ -28,9 +28,9 @@ $router->map( "GET", "/note/[i:id]", function( $id ) {
 $match = $router->match();
 
 if( is_array($match) && is_callable( $match['target'] ) ) {
-  // เรีัยก callback เพื่อดึงหน้าที่ต้องการมาแสดง
-	call_user_func_array( $match['target'], $match['params'] );
+  // เรียก callback เพื่อดึงหน้าที่ต้องการมาแสดง
+  call_user_func_array( $match['target'], $match['params'] );
 } else {
 	// แสดงหน้า 404
-	require __DIR__ . "/../src/Pages/404.php";
+  require __DIR__ . "/../src/Pages/404.php";
 }
