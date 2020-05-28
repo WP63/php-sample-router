@@ -2,6 +2,7 @@
 namespace App;
 
 use PDO;
+use PDOException;
 
 class Database {
   private static $instance = null;
@@ -13,7 +14,7 @@ class Database {
     try {
       $this->connection = new PDO( "sqlite:" . $db_path );
       $this->createTables();
-    } catch (\PDOException $e) {
+    } catch (PDOException $e) {
       echo $e->getMessage();
     }
   }
